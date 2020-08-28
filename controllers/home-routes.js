@@ -96,4 +96,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// route for search term
+
 module.exports = router;
