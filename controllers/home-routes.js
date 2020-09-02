@@ -98,5 +98,15 @@ router.get('/login', (req, res) => {
 });
 
 // route for search term
+router.get('/:title', (req, res) => {
+  const searchTerm = req.params.title;
+
+  for (let i = 0; i < title.length; i++) {
+    if (searchTerm === title[i].routeName) {
+      return res.json(title[i]);
+    }
+  }
+  return res.send('No character found');
+});
 
 module.exports = router;
