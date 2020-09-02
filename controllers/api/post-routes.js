@@ -42,6 +42,24 @@ router.get('/', (req, res) => {
         });
 });
 
+// Search Title
+router.get('/titles/:title', (req, res) => {
+  Post.findAll({
+    where: {
+      title: req.params.title
+    }
+  }).then(results => {
+    res.json(results);
+    console.log(results);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
+});
+
+
+
 // get a single post
 router.get('/:id', (req, res) => {
     Post.findOne({
