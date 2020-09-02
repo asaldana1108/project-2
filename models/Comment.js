@@ -11,8 +11,15 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true
         },
+        // comment_text: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     validate: {
+        //         len: [1]
+        //     }
+        // },
         comment_text: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len: [1]

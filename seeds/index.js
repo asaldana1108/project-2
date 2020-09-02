@@ -8,13 +8,13 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('--------------');
   await seedUsers();
-  console.log('--------------');
+  console.log('--------------User Seeded--------------');
 
   await seedPosts();
-  console.log('--------------');
+  console.log('--------------Post Seeded--------------');
 
   await seedComments();
-  console.log('--------------');
+  console.log('--------------Comment Seeded--------------');
 
   process.exit(0);
 };
