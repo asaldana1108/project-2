@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reading Nook</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
+        <h1 class="app-title">The Reading Nook</h1>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Book Club</h1>
+            <p class="lead">Search for your favorite books to read forums and comments about the books.&nbsp; Figure out
+                which books you want to read and engage with users that have read the same books that you have.</p>
+            <p></p>
+            <input type="text" class="form-control" id="searchtext"
+                style="display: inline; width: 60%; text-align: left; padding-right: 0px; float: left;"><button
+                type="button" class="btn btn-primary" id="search" style="line-height: 24px;">Search</button>
+        </div>
+        <form style="" _lpchecked="1"></form>
+
+
+
+
+        <div class="row marketing">
+        </div>
+
+        <div class="wrapper">
+            <main>
+                {{{ body }}}
+            </main>
+
+
+            <footer class="footer">
+                <form style="" _lpchecked="1"></form>
+                <p>© Source Code Cannibals</p>
+            </footer>
+        </div>
+        {{!-- {{#if loggedIn}} --}}
+        <script src="javascript/login.js"></script>
+        <script src="javascript/search.js"></script>
+        <script src="javascript/add-post.js"></script>
+        <script src="javascript/logout.js"></script>
+        <script src="javascript/edit-post.js"></script>
+        {{!-- {{/if}} --}}
+</body>
