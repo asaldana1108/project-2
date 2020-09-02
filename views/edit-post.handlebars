@@ -1,20 +1,21 @@
 {{!-- Can't reuse the post-info partial here, because the title is an editable form field --}}
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <a href="/dashboard" class="btn btn-info"> &larr; Back to dashboard</a>
   <h2>
     Edit Post
   </h2>
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
+      <br>
       <span>({{ post.description}})</span>
     </div>
     <div>
       |
       {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} {{ "comment" post.comments.length}}</a> --}}
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" class="btn btn-primary">Save post</button>
+    <button type="button" class="btn btn-primary">Delete post</button>
   </form>
 </article>
 
@@ -27,7 +28,7 @@
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="btn btn-primary">add comment</button>
   </div>
 </form>
 
