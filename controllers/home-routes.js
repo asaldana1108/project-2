@@ -105,7 +105,7 @@ router.get('/search-results', (req, res) => {
   //     return res.json(title[i]);
   //   }
   // }
-  return res.send('No character found');
+  res.render('search-results');
 });
 
 module.exports = router;
