@@ -17,14 +17,14 @@
 {{#if posts.length}}
 <section>
     <h2>Your Posts</h2>
-    <ol>
+    <div class="single-post-info">
         {{#each posts as |post|}}
-        <li>
+        <div>
             {{> post-info post}}
             <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-info">Edit post</a>
-        </li>
+        </div>
         {{/each}}
-    </ol>
+    </div>
 </section>
 {{/if}}
 
