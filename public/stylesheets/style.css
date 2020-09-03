@@ -21,13 +21,22 @@ a {
     font-weight: bold;
 }
 
-
+.single-post-info {
+    margin-left: 2rem;
+    background-color: white;
+}
 
 .btn-no-style {
  border: none; 
  background: none; 
 }
 
+.comment {
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    padding-bottom: 5px; 
+}
 
 ul.list-group {
     min-height: 130px;

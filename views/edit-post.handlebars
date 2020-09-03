@@ -4,9 +4,9 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-post-form"> 
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+      <input name="post-title" type="text" class="form-control" row="5" value="{{post.title}}" />
       <br>
       <span>({{ post.description}})</span>
     </div>
@@ -24,7 +24,7 @@
 {{!-- Form for adding new comments and then list the post's current comments underneath --}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="form-control" row="5"></textarea>
   </div>
 
   <div>
