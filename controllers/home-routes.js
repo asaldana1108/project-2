@@ -97,19 +97,5 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// route for Search Term
-// router.get('/:title', (req, res) => {
-//
-//   const searchTerm = req.params.title
-//
-//  console.log(searchTerm);
-//
-//   for (let i = 0; i < title.length; i++) {
-//     if (searchTerm === title[i].title) {
-//       return res.json(title[i]);
-//     }
-//   }
-//   return res.send('No book found');
-// });
 
 module.exports = router;
