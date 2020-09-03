@@ -42,22 +42,21 @@ router.get('/', (req, res) => {
         });
 });
 
-// Search Title
-router.get('/titles/:title', (req, res) => {
-  Post.findAll({
-    where: {
-      title: req.params.title
-    }
-  }).then(results => {
-    res.json(results);
-    console.log(results);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-});
-});
-
+// // Search Title
+// router.get('/titles/:title', (req, res) => {
+//   Post.findAll({
+//     where: {
+//       title: req.params.title
+//     }
+//   }).then(results => {
+//     res.json(results);
+//     console.log(results);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+// });
+// });
 
 
 // get a single post
@@ -151,7 +150,7 @@ router.put('/:id', (req, res) => {
 // router.put('/:id', withAuth, (req, res) => {
   router.put('/:id', (req, res) => {                //not updating the Description
     Post.update({
-      description: req.body.description
+      description: req.session.description
     },
     {
       where: {
