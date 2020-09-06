@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       'description',
       'created_at'
     ],
-    order: [['created_at', 'DESC']],//this line lists the posts by the "created_at" time stamp in descending "DESC" order
+    order: [['created_at', 'DESC']],  //this line lists the posts by the "created_at" time stamp in descending "DESC" order
     include: [
       {
         model: Comment,
@@ -66,11 +66,6 @@ router.get('/search/:searchterm', (req, res) => {
     });
 });
 
-
-
-
-
-
 // get a single post
 router.get('/:id', (req, res) => {
   Post.findOne({
@@ -119,8 +114,7 @@ router.get('/:id', (req, res) => {
 
 
 //  Create a post
-// router.post('/', withAuth, (req, res) => {
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   // expects {title: 'Book title', description: ' A consice description of the book', user_id: 1}
   Post.create({
     title: req.body.title,
@@ -136,8 +130,7 @@ router.post('/', (req, res) => {
 
 
 //  update a post title by id
-// router.put('/:id', withAuth, (req, res) => {
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update({
     title: req.body.title,
     description: req.body.description
@@ -161,8 +154,7 @@ router.put('/:id', (req, res) => {
 });
 
 // Delete a post by id
-// router.delete('/:id', withAuth, (req, res) => {
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id
