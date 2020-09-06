@@ -2,6 +2,9 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const Sequelize = require('sequelize'); //this is for the search term
+const { search } = require('./comment-routes');
+const Op = Sequelize.Op;
 
 
 // get all posts
@@ -42,21 +45,30 @@ router.get('/', (req, res) => {
     });
 });
 
-// // Search Title
-// router.get('/titles/:title', (req, res) => {
-//   Post.findAll({
-//     where: {
-//       title: req.params.title
-//     }
-//   }).then(results => {
-//     res.json(results);
-//     console.log(results);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//     res.status(500).json(err);
-// });
-// });
+router.get('/search/:searchterm', (req, res) => {
+  console.log(req.params.searchterm);
+  Post.findAll({
+    where: {
+      title: {
+        [Op.like]: `%${req.params.searchterm}%`
+      }
+    },
+    attributes: [
+      'id',
+      'title',
+      'description'
+    ]
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
+
+
 
 
 // get a single post
@@ -94,6 +106,7 @@ router.get('/:id', (req, res) => {
     .then(dbPostData => {
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found with this id' });
+        // res.status(404).json({ message: 'Victor Test' });
         return;
       }
       res.json(dbPostData);
