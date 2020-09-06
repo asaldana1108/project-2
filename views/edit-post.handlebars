@@ -1,0 +1,40 @@
+{{!-- Can't reuse the post-info partial here, because the title is an editable form field --}}
+<article>
+  <a href="/dashboard" class="btn btn-info"> &larr; Back to dashboard</a>
+  <h2>
+    Edit Post
+  </h2>
+  <form class="edit-post-form"> 
+    <div>
+      <input name="post-title" type="text" class="form-control" row="5" value="{{post.title}}" />
+      <br>
+      <span>({{ post.description}})</span>
+    </div>
+    <div>
+      |
+      {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} {{ "comment" post.comments.length}}</a> --}}
+    </div>
+    <button type="submit" class="btn btn-primary">Save post</button>
+    <button type="button" class="btn btn-primary">Delete post</button>
+  </form>
+</article>
+
+
+
+{{!-- Form for adding new comments and then list the post's current comments underneath --}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body" class="form-control" row="5"></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

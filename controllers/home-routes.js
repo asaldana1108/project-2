@@ -97,16 +97,15 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// route for search term
-router.get('/:title', (req, res) => {
-  const searchTerm = req.params.title;
-
-  for (let i = 0; i < title.length; i++) {
-    if (searchTerm === title[i].routeName) {
-      return res.json(title[i]);
-    }
-  }
-  return res.send('No character found');
+//route for search term
+router.get('/search-results', (req, res) => {
+  // const searchTerm = req.params.title
+  // for (let i = 0; i < title.length; i++) {
+  //   if (searchTerm === title[i].routeName) {
+  //     return res.json(title[i]);
+  //   }
+  // }
+  res.render('search-results');
 });
 
 module.exports = router;

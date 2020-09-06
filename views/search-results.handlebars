@@ -5,13 +5,87 @@
                 <h4 class="group card-title inner list-group-item-heading">
                     {{ title}}</h4>
                 <p class="group inner list-group-item-text">
-                    {{post_url}} </p>
+                    {{description}} </p>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <a class="btn btn-success" href="">view book post</a>
+                        <a class="btn btn-success" href="">View Book Post</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div>
+    <h1 class="form-label">Book Name</h1>
+    <article class="post">
+        <div class="title">
+            <a href="/post/2" target="_blank" class="post-link">The Dark Tower I</a>
+            <div class="meta">
+                Created by user04 on 9/1/2020
+                |
+            </div>
+        </div>
+    </article>
+    <div class="single-post-info">
+        The Man in Black fled across the desert, and the gunslinger followed. So begins Book I of Stephen King’s iconic
+        fantasy series, The Dark Tower. Part sci-fi novel, part futuristic dystopia, part spaghetti Western, and part
+        high fantasy vision, The Gunslinger tells the story of Roland Deschain, Mid-World’s last gunslinger, who is
+        tracking an enigmatic magician known only as the man in black. Following his quarry across the demon-infested
+        Mohaine Desert, Roland confronts a mad preacher woman and her murderous flock, holds palaver with a speaking
+        demon, and finally befriends a young boy from our world named Jake Chambers. Jake joins Roland on his quest, but
+        while Roland travels with his young companion Jake, the man in black travels with Roland’s soul in his pocket.
+    </div>
+
+    {{#if loggedIn}}
+    <form class="comment-form">
+        <div>
+            <textarea name="comment-body" class="form-control" row="5"></textarea>
+        </div>
+    
+        <div>
+            <button type="submit" class="btn btn-primary">add comment</button>
+        </div>
+    </form>
+    {{/if}}
+
+    {{!-- <div class="comments">
+        <h2 class="form-label">Comments</h2>
+        <section>
+            <div class="comment">
+                <div class="text">
+                    Nunc nisi ipsum, facilisis id orci eu, consectetur malesuada augue. In id purus dapibus, varius lectus sit amet, fermentum purus. Ut vel tristique augue.
+                </div>
+                <div class="meta">
+                    user17 on 9/1/2020
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="comment">
+                <div class="text">
+                    Aenean at varius odio, tincidunt dignissim lorem. Vivamus cursus nulla dui. Pellentesque malesuada tempus est, nec ornare sem elementum.
+                </div>
+                <div class="meta">
+                    user16 on 9/1/2020
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="comment">
+                <div class="text">
+                    Etiam magna ex, condimentum vel felis sit amet, efficitur sagittis enim. Integer tincidunt vitae elit sed hendrerit. Aliquam non tortor.
+                </div>
+                <div class="meta">
+                    user15 on 9/1/2020
+                </div>
+            </div>
+        </section>
+    </div> --}}
+
+    {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+
+    {{/if}}
+
 </div>

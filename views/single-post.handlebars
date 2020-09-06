@@ -1,14 +1,18 @@
+<div>
+<h1 class="form-label">Book Name</h1>
 {{> post-info post }}
+<div class="single-post-info">
+{{ post.description }}
+</div>
 
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
-        <textarea name="comment-body"></textarea>
+        <textarea name="comment-body" class="form-control" row="5"></textarea>
     </div>
 
     <div>
-        <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
+        <button type="submit" class="btn btn-primary">add comment</button>
     </div>
 </form>
 {{/if}}
@@ -17,5 +21,7 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+
 {{/if}}
+
+</div>
