@@ -41,5 +41,9 @@ MIT
 
 ## Questions
 For any additional questions, here is my contact information. 
+### Alvarado Saldana
 * [GitHub] (github.com/asaldana1108)
 * [Email] (asaldana1108@gmail.com)
+### Victor Cesar Lopez
+* [GitHub] (github.com/civ187)
+* [Email] (civ187@gmail.com)
