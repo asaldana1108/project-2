@@ -1,10 +1,15 @@
 # The Reading Nook (Project 2)
 
+## App URL
+https://thereadingnook.herokuapp.com/
+
 ## Github URL
 https://github.com/asaldana1108/project-2
 
 ## Walkthrough Video
+https://drive.google.com/file/d/1HwJUveUbCTCdLyOALOHvYLPhStB0AQvi/view
 
+![](The Reading Nook.png)
 
 ## Description 
 This blog style website was designed to give advid readers a place where they can find new books recommendations, review books, and post discussions with a friendly community. 
@@ -24,6 +29,9 @@ npm install
 
 ## Usage
 npm start
+
+## Contributors
+Victor Cesar Lopez, Andrew Van Eman, Joesph Ramos, Jack Hoover, and Alvaro Saldana
 
 ## License
 MIT
